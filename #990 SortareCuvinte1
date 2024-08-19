@@ -1,0 +1,22 @@
+#include <cstring>
+#include <fstream>
+#include <vector> 
+#include <algorithm>
+std::string nume="sortarecuvinte1";
+std::ifstream fin(nume+".in");
+std::ofstream fout(nume+".out");
+std::vector<std::string>vs;
+int main()
+{
+    std::string c;
+    while(fin>>c)
+    {
+        vs.push_back(c);
+    }
+    std::sort(vs.begin(),vs.end());
+    for(int i=0;i<vs.size();i++)
+    {
+        fout<<vs[i]<<'\n';
+    }
+    return 0;
+}
